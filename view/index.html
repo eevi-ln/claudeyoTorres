@@ -116,46 +116,500 @@
 
     <!-- Barra lateral flotante -->
     <aside class="sidebar">
-        <h2>Misiones</h2>
-        <ul id="mission-list">
-            <li id="mission-text">Selecciona cualquier edificio en el mapa para ver su misión.</li>
-        </ul>
 
-        <h2>Edificios</h2>
-        <ul class="building-menu">
-            <li data-target="A">Edificio A</li>
-            <li data-target="B">Edificio B</li>
-            <li data-target="C">Edificio C</li>
-            <li data-target="D">Edificio D</li>
-            <li data-target="E">Edificio E</li>
-            <li data-target="F">Edificio F</li>
-            <li data-target="G">Edificio G</li>
-            <li data-target="H">Edificio H</li>
-            <li data-target="I">Edificio I</li>
-            <li data-target="J">Edificio J</li>
-            <li data-target="K">Edificio K</li>
-            <li data-target="L">Edificio L</li>
-            <li data-target="M">Edificio M</li>
-            <li data-target="N">Edificio N</li>
-            <li data-target="O">Edificio O</li>
-            <li data-target="P">Edificio P</li>
-            <li data-target="Q">Edificio Q</li>
-            <li data-target="R">Edificio R</li>
-            <li data-target="S">Edificio S</li>
-            <li data-target="T">Edificio T</li>
-            <li data-target="U">Edificio U</li>
-            <li data-target="V">Edificio V</li>
-            <li data-target="W">Edificio W</li>
-            <li data-target="X">Edificio X</li>
-            <li data-target="Y">Edificio Y</li>
-            <li data-target="Z">Edificio Z</li>
-            <li data-target="AA">Edificio AA</li>
-            <li data-target="AB">Edificio AB</li>
-            <li data-target="AC">Edificio AC</li>
-            <li data-target="AD">Edificio AD</li>
-            <li data-target="AE">Edificio AE</li>
-            <li data-target="AF">Edificio AF</li>
-        </ul>
+        <div class="sidebar-phase active" id="phase-default">
+            <h2>Misiones</h2>
+            <ul>
+                <li>Ve a clases</li>
+            </ul>
+
+            <h2>Edificios</h2>
+            <ul class="building-menu"> 
+                <li data-target="A">Edificio A</li>
+                <li data-target="B">Edificio B</li>
+                <li data-target="C">Edificio C</li>
+                <li data-target="D">Edificio D</li>
+                <li data-target="E">Edificio E</li>
+                <li data-target="F">Edificio F</li>
+                <li data-target="G">Edificio G</li>
+                <li data-target="H">Edificio H</li>
+                <li data-target="I">Edificio I</li>
+                <li data-target="J">Edificio J</li>
+                <li data-target="K">Edificio K</li>
+                <li data-target="L">Edificio L</li>
+                <li data-target="M">Edificio M</li>
+                <li data-target="N">Edificio N</li>
+                <li data-target="O">Edificio O</li>
+                <li data-target="P">Edificio P</li>
+                <li data-target="Q">Edificio Q</li>
+                <li data-target="R">Edificio R</li>
+                <li data-target="S">Edificio S</li>
+                <li data-target="T">Edificio T</li>
+                <li data-target="U">Edificio U</li>
+                <li data-target="V">Edificio V</li>
+                <li data-target="W">Edificio W</li>
+                <li data-target="X">Edificio X</li>
+                <li data-target="Y">Edificio Y</li>
+                <li data-target="Z">Edificio Z</li>
+                <li data-target="AA">Edificio AA</li>
+                <li data-target="AB">Edificio AB</li>
+                <li data-target="AC">Edificio AC</li>
+                <li data-target="AD">Edificio AD</li>
+                <li data-target="AE">Edificio AE</li>
+                <li data-target="AF">Edificio AF</li>
+            </ul>
+        </div>
+        
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-B" data-building="B">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-C" data-building="C">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-phase" id="phase-A" data-building="A">
+            <button class="back-btn" data-back>← Volver al mapa</button>
+            <div class="phase-header">
+                <span class="building-badge" style="background-color: #8cd3be;">A</span>
+                <h2>Edificio A</h2>
+            </div>
+            <p class="phase-subtitle">Misiones por completar:</p>
+            <ul class="pending-missions">
+                <li class="mission-item pending">Encuentra el Aula Magna</li>
+                <li class="mission-item pending">Revisa el diario mural central</li>
+                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+            </ul>
+        </div>
+
+
+
     </aside>
 
     <script type="module" src="/src/main.ts"></script>
