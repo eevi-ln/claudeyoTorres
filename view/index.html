@@ -24,6 +24,12 @@
         >
     </div>
 
+    <div class="boton-qr">
+        <button type="button" title="Escanear código QR">
+            <img src="../imagenes/qr.svg" alt="Escanear QR">
+        </button>
+    </div>
+
         <!-- Imagen base del plano -->
         <img src="../imagenes/mapaCroppeado.png" alt="Mapa Casa Central USM" class="map-image">
 
@@ -134,9 +140,8 @@
         <div class="sidebar-phase active" id="phase-default">
             <h2>Misiones</h2>
             <ul>
-                <li>Ve a clases mechon culiao</li>
+                <li>Ve a clases</li>
             </ul>
-            
         </div>
         
         <div class="sidebar-phase" id="phase-A" data-building="A">
@@ -158,12 +163,34 @@
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Entra al edificio A</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
-
-
         </div>
 
         <div class="sidebar-phase" id="phase-B" data-building="B">
@@ -176,18 +203,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-B">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-B" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Entra al edificio B</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -201,18 +252,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-C">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-C" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
         
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Entra al edificio C</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -226,18 +301,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-D">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-D" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Entra al edificio D</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -251,18 +350,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-E">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-E" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Entra al edificio E</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -276,18 +399,51 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-F">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-F" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Entra al edificio F</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Registrate en el LabPro</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Descubre el LabComp</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="4">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Identifica la sala de la Jefa de carrera</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -301,18 +457,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-G">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-G" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Entra al edificio G</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -326,18 +506,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-CG">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-CG" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Entra al edificio CG</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -351,18 +555,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-I">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-I" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -376,18 +604,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-J">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-J" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -401,18 +653,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-K">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-K" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -426,18 +702,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-L">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-L" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -451,18 +751,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-M">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-M" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>            
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -476,18 +800,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-N">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-N" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -501,18 +849,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-O">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-O" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -526,18 +898,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-P">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-P" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -551,18 +947,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-Q">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-Q" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -576,18 +996,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-R">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-R" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -601,18 +1045,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-S">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-S" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -626,18 +1094,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-T">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-T" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -651,18 +1143,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-U">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-U" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -676,18 +1192,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-V">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-V" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -701,18 +1241,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-W">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-W" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -726,18 +1290,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-X">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-X" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -751,18 +1339,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-Y">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-Y" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -776,18 +1388,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-Z">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-Z" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -801,18 +1437,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-AA">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-AA" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -826,18 +1486,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-AB">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-AB" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -851,18 +1535,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-AC">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-AC" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -876,18 +1584,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-AD">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-AD" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -901,18 +1633,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-AE">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-AE" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -926,18 +1682,42 @@
             <div class="progress-container">
                 <div class="progress-info">
                     <span>Progreso</span>
-                    <span class="progress-percentage" id="progress-text-A">0%</span>
+                    <span class="progress-percentage" id="progress-text-AF">0%</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill-A" style="width: 0%; background-color: #8cd3be;"></div>
+                    <div class="progress-fill" id="progress-fill-AF" style="width: 0%; background-color: #8cd3be;"></div>
                 </div>
             </div>
 
             <p class="phase-subtitle">Misiones por completar:</p>
             <ul class="pending-missions">
-                <li class="mission-item pending">Encuentra el Aula Magna</li>
-                <li class="mission-item pending">Revisa el diario mural central</li>
-                <li class="mission-item pending">Ubica las oficinas de dirección</li>
+                <li>
+                    <div class="mission-item pending" data-mission="1">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Encuentra el Aula Magna</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="2">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Revisa el diario mural central</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mission-item pending" data-mission="3">
+                        <div class="mission-header">
+                            <button type="button" class="mission-action">Ubica las oficinas de dirección</button>
+                            <button class="mission-toggle" type="button" aria-label="Ver detalles">▼</button>
+                        </div>
+                        <div class="mission-description">Descripción de la misión aquí.</div>
+                    </div>
+                </li>
             </ul>
         </div>
 
