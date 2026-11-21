@@ -297,6 +297,17 @@ html, body {
     color: #f0f0f0;
 }
 
+.mission.action {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    appearance: none;
+}
+
 .mission-description {
     display: none;
     padding: 10px 0;
