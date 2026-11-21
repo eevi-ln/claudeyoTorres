@@ -297,6 +297,26 @@ html, body {
     color: #f0f0f0;
 }
 
+.mission-description {
+    display: none;
+    padding: 10px 0;
+}
+
+.mission-item.expanded .mission-description {
+    display: block;
+}
+
+.mission-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.mission-item.expanded .mission-toggle {
+    transform: rotate(180deg);
+}
+
 /* Clase lista para cuando marques una misión como completada en JS */
 .mission-item.completed {
     border-left-color: #59a14f;
