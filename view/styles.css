@@ -43,8 +43,8 @@ html, body {
 
 /* Polígonos de los edificios */
 .building {
-    fill: transparent;
-    stroke: transparent;
+    
+    stroke: #464a4c;
     stroke-width: 3.5px;
     stroke-linejoin: round;
     cursor: pointer;
