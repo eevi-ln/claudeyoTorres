@@ -43,7 +43,6 @@ html, body {
 
 /* Polígonos de los edificios */
 .building {
-    
     stroke: #464a4c;
     stroke-width: 3.5px;
     stroke-linejoin: round;
@@ -52,7 +51,7 @@ html, body {
 }
 
 .building:hover {
-    stroke: #464a4c;
+    stroke: #000;
     fill-opacity: 0.55;
 }
 
@@ -60,10 +59,6 @@ html, body {
     stroke: #464a4c;
     stroke-width: 4px;
     fill-opacity: 0.85;
-}
-
-#b-A{
-    color: #8cd3be;
 }
 
 /* Barra lateral flotante (no altera el tamaño del mapa) */
