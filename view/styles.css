@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow: hidden; /* Evita scrollbars innecesarios */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor ajustado exactamente a la proporción del mapa */
+.map-viewport {
+    position: relative;
+    width: 100vw;
+    max-height: 100vh;
+    aspect-ratio: 1000 / 755; /* Proporción nativa de mapa_casa_central.jpeg */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.map-image {
+    width: 100%;
+    height: 104%;
+    display: block;
+    object-fit: fill;
+    user-select: none;
+}
+
+/* SVG superpuesto al 100% sobre la imagen */
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Polígonos de los edificios */
+:root {
+    --unlocked-opacity: 0.5;
+}
+
+/* Zonas NO desbloqueadas: completamente opacas */
+.building {
+    stroke: #464a4c;
+    stroke-width: 3.5px;
+    stroke-linejoin: round;
+    cursor: pointer;
+    fill-opacity: 1;
+    stroke-opacity: 1;
+    transition: fill-opacity 0.2s ease, stroke 0.2s ease;
+}
+
+/* Zonas DESBLOQUEADAS: obedecen al slider */
+.building.unlocked {
+    fill-opacity: var(--unlocked-opacity);
+}
+
+.building:hover {
+    stroke: #000;
+    stroke-opacity: 1;
+}
+
+/* Si pasas el mouse por un edificio desbloqueado, aumenta ligeramente su visibilidad */
+.building.unlocked:hover {
+    fill-opacity: min(1, calc(var(--unlocked-opacity) + 0.25));
+}
+
+/* Panel flotante del slider (esquina inferior derecha) */
+.opacity-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 220px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background-color: rgba(15, 15, 20, 0.82);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.opacity-control label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.opacity-control input[type="range"] {
+    width: 100%;
+    accent-color: #8cd3be;
+    cursor: pointer;
+}
+
+
+/* Barra lateral flotante (no altera el tamaño del mapa) */
+.sidebar {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 250px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    z-index: 10;
+
+    background-color: rgba(15, 15, 20, 0.82);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    padding: 20px;
+    color: white;
+}
+
+.sidebar h2 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 6px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+    font-size: 0.92rem;
+    color: #e0e0e0;
+}
+
+.building-menu li {
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.building-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.building-menu li.active-item {
+    background-color: rgba(255, 255, 255, 0.22);
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Control de visibilidad de las fases */
+.sidebar-phase {
+    display: none;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.sidebar-phase.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botón para regresar a la fase inicial */
+.back-btn {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Cabecera de cada fase de edificio con su color distintivo */
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 10px;
+}
+
+.phase-header h2 {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.building-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    padding: 0 6px;
+    border-radius: 8px;
+    color: #1a1a1a;
+    font-weight: 800;
+    font-size: 0.9rem;
+    border: 2px solid #464a4c;
+}
+
+.phase-subtitle {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #a0a0a8;
+    margin-bottom: 10px;
+}
+
+/* Tarjetas de misiones pendientes */
+.pending-missions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mission-item {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-left: 3px solid #f28e2b; /* Indicador de misión pendiente */
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #f0f0f0;
+}
+
+/* Clase lista para cuando marques una misión como completada en JS */
+.mission-item.completed {
+    border-left-color: #59a14f;
+    opacity: 0.55;
+    text-decoration: line-through;
+}
+
+/* Contenedor de la barra de progreso por edificio */
+.progress-container {
+    margin-bottom: 18px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    color: #c8c8d0;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.progress-percentage {
+    color: #ffffff;
+    font-variant-numeric: tabular-nums; /* Evita que el texto salte al cambiar números */
+}
+
+/* Carril de fondo de la barra */
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Relleno dinámico de la barra */
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #8cd3be;
+    border-radius: 999px;
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
