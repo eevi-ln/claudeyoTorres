@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo USM - Casa Central</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="map-viewport" id="map-viewport">
+        <!-- Imagen base del plano -->
+        <img src="../imagenes/mapa_casa_central.jpeg" alt="Mapa Casa Central USM" class="map-image">
+
+        <!-- Capa interactiva SVG superpuesta -->
+        <svg class="map-overlay" viewBox="0 0 1000 755" preserveAspectRatio="none">
+            <!-- Edificio C (Azul) -->
+            <polygon class="building" id="b-C" data-building="C" data-color="#4e79a7"
+                points="448,243 706,253 703,341 446,331" />
+
+            <!-- Edificio B (Rojo / Coral) -->
+            <polygon class="building" id="b-B" data-building="B" data-color="#e15759"
+                points="552,350 726,356 724,421 679,421 679,440 584,439 584,418 552,418" />
+
+            <!-- Edificio A (Verde azulado / Teal) -->
+            <polygon class="building" id="b-A" data-building="A" data-color="#499894"
+                points="604,441 645,441 645,484 687,484 687,565 654,565 654,573 557,573 557,545 604,545" />
+
+            <!-- Edificio U (Amarillo / Mostaza) -->
+            <polygon class="building" id="b-U" data-building="U" data-color="#edc948"
+                points="544,440 580,440 580,542 544,542" />
+
+            <!-- Edificio D (Verde) -->
+            <polygon class="building" id="b-D" data-building="D" data-color="#59a14f"
+                points="698,457 754,457 754,524 698,524" />
+
+            <!-- Edificio E (Naranjo) -->
+            <polygon class="building" id="b-E" data-building="E" data-color="#f28e2b"
+                points="706,527 809,527 809,549 706,549" />
+
+            <!-- Edificio F (Azul acero) -->
+            <polygon class="building" id="b-F" data-building="F" data-color="#4e79a7"
+                points="703,607 870,607 870,631 804,631 804,649 790,649 790,631 703,631" />
+
+            <!-- Edificio T (Verde menta) -->
+            <polygon class="building" id="b-T" data-building="T" data-color="#76b7b2"
+                points="906,612 945,594 962,616 914,640" />
+
+            <!-- Edificio K (Turquesa) -->
+            <polygon class="building" id="b-K" data-building="K" data-color="#76b7b2"
+                points="724,310 743,303 764,348 746,356" />
+
+            <!-- Edificio P (Celeste) -->
+            <polygon class="building" id="b-P" data-building="P" data-color="#59a14f"
+                points="552,163 572,163 572,154 624,154 624,175 633,175 633,200 552,200" />
+
+            <!-- Edificio R (Azul claro) -->
+            <polygon class="building" id="b-R" data-building="R" data-color="#4e79a7"
+                points="309,225 355,225 355,272 332,272 332,249 309,249" />
+
+            <!-- Edificio M (Naranjo claro) -->
+            <polygon class="building" id="b-M" data-building="M" data-color="#f28e2b"
+                points="266,318 298,323 284,410 256,406" />
+        </svg>
+    </div>
+
+    <!-- Barra lateral flotante sobre el mapa -->
+    <aside class="sidebar">
+        <h2>Misiones</h2>
+        <ul id="mission-list">
+            <li id="mission-text">Selecciona un edificio en el mapa para ver su misión.</li>
+        </ul>
+
+        <h2>Edificios</h2>
+        <ul class="building-menu">
+            <li data-target="A">Edificio A</li>
+            <li data-target="B">Edificio B</li>
+            <li data-target="C">Edificio C</li>
+            <li data-target="D">Edificio D</li>
+            <li data-target="E">Edificio E</li>
+            <li data-target="F">Edificio F</li>
+            <li data-target="M">Edificio M</li>
+            <li data-target="R">Edificio R</li>
+            <li data-target="P">Edificio P</li>
+            <li data-target="U">Edificio U</li>
+            <li data-target="K">Edificio K</li>
+            <li data-target="T">Edificio T</li>
+        </ul>
+    </aside>
+
+    <script src="script.js"></script>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
