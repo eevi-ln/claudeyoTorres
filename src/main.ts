@@ -68,6 +68,38 @@ function updateOpacity(): void {
 opacitySlider.addEventListener("input", updateOpacity);
 updateOpacity();
 
+function updateTotalProgress(): void {
+    const allMissions = Object.values(zones).flatMap(
+        zone => zone.missions
+    );
+
+    const total = allMissions.length;
+
+    const completed = allMissions.filter(
+        mission => mission.complete
+    ).length;
+
+    const percentage = total === 0
+        ? 0
+        : Math.round((completed / total) * 100);
+
+    const progressText = document.getElementById(
+        "total-progress-text"
+    );
+
+    const progressFill = document.getElementById(
+        "total-progress-fill"
+    );
+
+    if (progressText) {
+        progressText.textContent = `${percentage}%`;
+    }
+
+    if (progressFill) {
+        progressFill.style.width = `${percentage}%`;
+    }
+}
+
 function updateProgress(building: string): void {
     const zone = zones[building];
     if (!zone) return;
@@ -84,6 +116,16 @@ function updateProgress(building: string): void {
 
     const phase = document.getElementById(`phase-${building}`);
     if (!phase) return;
+    const missionElements = phase.querySelectorAll<HTMLElement>(
+        ".mission-item"
+    );
+
+    missionElements.forEach((mission, index) => {
+        mission.style.display =
+            percentage === 0 && index > 0
+                ? "none"
+                : "";
+    });
 
     const progressText = phase.querySelector<HTMLElement>(
         ".progress-percentage"
@@ -114,9 +156,9 @@ function updateProgress(building: string): void {
             buildingElement.style.fillOpacity =
                 percentage === 100
                     ? opacitySlider.value
-                    : "1";
+                    : opacitySlider.value;
         }
-        if (percentage === 100) {
+        if (percentage !== 000) {
             opacity = opacitySlider.value;
         }
     }
@@ -127,6 +169,7 @@ function updateProgress(building: string): void {
 }
 
 Object.keys(zones).forEach(updateProgress);
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -188,6 +231,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     show_phase("default");
 });
+document.querySelectorAll<HTMLElement>(".mission-item").forEach((mission) => {
+    const toggle = mission.querySelector<HTMLButtonElement>(
+        ".mission-toggle"
+    );
+
+    if (!toggle) return;
+
+    toggle.addEventListener("click", (event) => {
+        event.stopPropagation();
+
+        mission.classList.toggle("expanded");
+    });
+});
 
 function completeMission(
     building: string,
@@ -215,6 +271,8 @@ function completeMission(
     element.classList.toggle("pending", !mission.complete);
 
     updateProgress(building);
+    // Update global campus progress
+    updateTotalProgress();
 }
 
 document.querySelectorAll<SVGPolygonElement>(
@@ -248,3 +306,4 @@ document.querySelectorAll<HTMLElement>(
 
     });
 });
+updateTotalProgress();
