@@ -332,7 +332,17 @@ html, body {
 .mission-item.completed {
     border-left-color: #59a14f;
     opacity: 0.55;
+}
+
+/* Tacha únicamente el título de la misión */
+.mission-item.completed .mission-action {
     text-decoration: line-through;
+}
+
+/* La descripción queda limpia y sin tachar */
+.mission-description {
+    display: none;
+    padding: 10px 0;
 }
 
 /* Contenedor de la barra de progreso por edificio */
