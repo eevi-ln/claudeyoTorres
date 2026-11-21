@@ -1,0 +1,25 @@
+{
+  "name": "claudeyotorres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "tsx --test src/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eevi-ln/claudeyoTorres.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/eevi-ln/claudeyoTorres/issues"
+  },
+  "homepage": "https://github.com/eevi-ln/claudeyoTorres#readme",
+  "devDependencies": {
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}
