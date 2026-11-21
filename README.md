@@ -33,3 +33,26 @@ Este es un proyecto web que requiere entonces todas las dependencias pertinentes
 
 En el desarrollo de este proyecto nos apoymosa de inteligencia artificial
 generativa, específicamente usamos Claude a través de DuckAi y Gemini.
+
+## Ejecución
+
+> [!CAUTION]
+>  ̣Para poder ejecutar se debe realizar
+>
+> npm install
+
+Para ejecutar utilizar:
+> npm run dev
+
+## Información varia
+
+Integrantes:
+
+Jesús Uzcanga
+
+Evii Lambert
+
+Bastián Jiménez
+
+> [!NOTE]
+> La tecnología utilizada es el lenguaje typescript como la herramienta de despliegue VITE
