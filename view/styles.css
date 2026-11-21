@@ -294,10 +294,10 @@ html, body {
     border-radius: 6px;
     font-size: 0.88rem;
     line-height: 1.35;
-    
+    color: #f0f0f0;
 }
 
-.mission.action {
+.mission-action {
     background: transparent;
     border: none;
     padding: 0;
