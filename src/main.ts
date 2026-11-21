@@ -68,6 +68,38 @@ function updateOpacity(): void {
 opacitySlider.addEventListener("input", updateOpacity);
 updateOpacity();
 
+function updateTotalProgress(): void {
+    const allMissions = Object.values(zones).flatMap(
+        zone => zone.missions
+    );
+
+    const total = allMissions.length;
+
+    const completed = allMissions.filter(
+        mission => mission.complete
+    ).length;
+
+    const percentage = total === 0
+        ? 0
+        : Math.round((completed / total) * 100);
+
+    const progressText = document.getElementById(
+        "total-progress-text"
+    );
+
+    const progressFill = document.getElementById(
+        "total-progress-fill"
+    );
+
+    if (progressText) {
+        progressText.textContent = `${percentage}%`;
+    }
+
+    if (progressFill) {
+        progressFill.style.width = `${percentage}%`;
+    }
+}
+
 function updateProgress(building: string): void {
     const zone = zones[building];
     if (!zone) return;
@@ -137,6 +169,7 @@ function updateProgress(building: string): void {
 }
 
 Object.keys(zones).forEach(updateProgress);
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -238,6 +271,8 @@ function completeMission(
     element.classList.toggle("pending", !mission.complete);
 
     updateProgress(building);
+    // Update global campus progress
+    updateTotalProgress();
 }
 
 document.querySelectorAll<SVGPolygonElement>(
@@ -271,3 +306,4 @@ document.querySelectorAll<HTMLElement>(
 
     });
 });
+updateTotalProgress();
