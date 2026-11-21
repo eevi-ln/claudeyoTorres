@@ -4,58 +4,114 @@
     padding: 0;
 }
 
-body {
-      background-image: url("../imagenes/mapa_casa_central.jpeg");
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-color: #fff;
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow: hidden; /* Evita scrollbars innecesarios */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-      display: flex;
-      gap: 24px;             /* Espacio entre el panel y el contenido */
-      padding: 16px;         /* Margen exterior para que el panel flote */
-      min-height: 100vh;
-      font-family: sans-serif;
-      color: white;
-    }
+/* Contenedor ajustado exactamente a la proporción del mapa */
+.map-viewport {
+    position: relative;
+    width: 100vw;
+    max-height: 100vh;
+    aspect-ratio: 1000 / 755; /* Proporción nativa de mapa_casa_central.jpeg */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
 
-.sidebar {
-    width: 250px;
-    height: calc(100vh - 90px);
-    background-color: rgba(0, 0, 0, 0.75); /* Fondo negro semitransparente */
-    padding: 20px;
-    flex-shrink: 0;
-    position: sticky;
+.map-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: fill;
+    user-select: none;
+}
+
+/* SVG superpuesto al 100% sobre la imagen */
+.map-overlay {
+    position: absolute;
     top: 0;
-    overflow-y: auto;
-    top: 16px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-    background-color: rgba(15, 15, 20, 0.78);
-    backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
-    border-radius: 16px;         /* Bordes redondeados */
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);   /* Sombra de elevación */
-    padding: 24px 20px;
+/* Polígonos de los edificios */
+.building {
+    fill: transparent;
+    stroke: transparent;
+    stroke-width: 2.5px;
+    cursor: pointer;
+    transition: fill 0.25s ease, stroke 0.25s ease, filter 0.25s ease;
+}
+
+.building:hover {
+    stroke: #222;
+    fill-opacity: 0.45;
+}
+
+.building.active {
+    stroke: #1a1a1a;
+    stroke-width: 3px;
+    fill-opacity: 0.65;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+}
+
+/* Barra lateral flotante (no altera el tamaño del mapa) */
+.sidebar {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 250px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    z-index: 10;
+
+    background-color: rgba(15, 15, 20, 0.82);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    padding: 20px;
+    color: white;
 }
 
 .sidebar h2 {
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 6px;
 }
 
 .sidebar ul {
     list-style: none;
+    margin-bottom: 20px;
 }
 
 .sidebar li {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    font-size: 0.92rem;
+    color: #e0e0e0;
 }
 
-.sidebar a {
-    color: white;
-    text-decoration: none;
+.building-menu li {
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.sidebar a:hover {
-    text-decoration: underline;
+.building-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.building-menu li.active-item {
+    background-color: rgba(255, 255, 255, 0.22);
+    font-weight: bold;
+    color: #fff;
 }
