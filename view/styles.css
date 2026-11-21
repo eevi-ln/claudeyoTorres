@@ -42,27 +42,69 @@ html, body {
 }
 
 /* Polígonos de los edificios */
+:root {
+    --unlocked-opacity: 0.5;
+}
+
+/* Zonas NO desbloqueadas: completamente opacas */
 .building {
     stroke: #464a4c;
     stroke-width: 3.5px;
     stroke-linejoin: round;
     cursor: pointer;
-    fill-opacity: 0.5;
-    stroke-opacity: 0.5;
-    transition: fill 0.2s ease, stroke 0.2s ease;
+    fill-opacity: 1;
+    stroke-opacity: 1;
+    transition: fill-opacity 0.2s ease, stroke 0.2s ease;
+}
+
+/* Zonas DESBLOQUEADAS: obedecen al slider */
+.building.unlocked {
+    fill-opacity: var(--unlocked-opacity);
 }
 
 .building:hover {
     stroke: #000;
-    fill-opacity: 0.8;
-    stroke-opacity: 0.8;
+    stroke-opacity: 1;
 }
 
-.building.active {
-    stroke: #464a4c;
-    stroke-width: 4px;
-    fill-opacity: 0.85;
+/* Si pasas el mouse por un edificio desbloqueado, aumenta ligeramente su visibilidad */
+.building.unlocked:hover {
+    fill-opacity: min(1, calc(var(--unlocked-opacity) + 0.25));
 }
+
+/* Panel flotante del slider (esquina inferior derecha) */
+.opacity-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 220px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background-color: rgba(15, 15, 20, 0.82);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.opacity-control label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.opacity-control input[type="range"] {
+    width: 100%;
+    accent-color: #8cd3be;
+    cursor: pointer;
+}
+
 
 /* Barra lateral flotante (no altera el tamaño del mapa) */
 .sidebar {
@@ -219,4 +261,43 @@ html, body {
     border-left-color: #59a14f;
     opacity: 0.55;
     text-decoration: line-through;
+}
+
+/* Contenedor de la barra de progreso por edificio */
+.progress-container {
+    margin-bottom: 18px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    color: #c8c8d0;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.progress-percentage {
+    color: #ffffff;
+    font-variant-numeric: tabular-nums; /* Evita que el texto salte al cambiar números */
+}
+
+/* Carril de fondo de la barra */
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Relleno dinámico de la barra */
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #8cd3be;
+    border-radius: 999px;
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
