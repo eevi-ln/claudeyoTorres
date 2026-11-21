@@ -84,6 +84,16 @@ function updateProgress(building: string): void {
 
     const phase = document.getElementById(`phase-${building}`);
     if (!phase) return;
+    const missionElements = phase.querySelectorAll<HTMLElement>(
+        ".mission-item"
+    );
+
+    missionElements.forEach((mission, index) => {
+        mission.style.display =
+            percentage === 0 && index > 0
+                ? "none"
+                : "";
+    });
 
     const progressText = phase.querySelector<HTMLElement>(
         ".progress-percentage"
@@ -114,9 +124,9 @@ function updateProgress(building: string): void {
             buildingElement.style.fillOpacity =
                 percentage === 100
                     ? opacitySlider.value
-                    : "1";
+                    : opacitySlider.value;
         }
-        if (percentage === 100) {
+        if (percentage !== 000) {
             opacity = opacitySlider.value;
         }
     }
@@ -187,6 +197,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     show_phase("default");
+});
+document.querySelectorAll<HTMLElement>(".mission-item").forEach((mission) => {
+    const toggle = mission.querySelector<HTMLButtonElement>(
+        ".mission-toggle"
+    );
+
+    if (!toggle) return;
+
+    toggle.addEventListener("click", (event) => {
+        event.stopPropagation();
+
+        mission.classList.toggle("expanded");
+    });
 });
 
 function completeMission(
