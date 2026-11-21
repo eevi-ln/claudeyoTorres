@@ -45,21 +45,25 @@ html, body {
 .building {
     fill: transparent;
     stroke: transparent;
-    stroke-width: 2.5px;
+    stroke-width: 3.5px;
+    stroke-linejoin: round;
     cursor: pointer;
-    transition: fill 0.25s ease, stroke 0.25s ease, filter 0.25s ease;
+    transition: fill 0.2s ease, stroke 0.2s ease;
 }
 
 .building:hover {
-    stroke: #222;
-    fill-opacity: 0.45;
+    stroke: #464a4c;
+    fill-opacity: 0.55;
 }
 
 .building.active {
-    stroke: #1a1a1a;
-    stroke-width: 3px;
-    fill-opacity: 0.65;
-    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+    stroke: #464a4c;
+    stroke-width: 4px;
+    fill-opacity: 0.85;
+}
+
+#b-A{
+    color: #8cd3be;
 }
 
 /* Barra lateral flotante (no altera el tamaño del mapa) */
